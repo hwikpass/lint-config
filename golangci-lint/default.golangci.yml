@@ -159,7 +159,6 @@ linters:
     - bidichk # checks for dangerous unicode character sequences
     - bodyclose # checks whether HTTP response body is closed successfully
     - contextcheck # check the function whether use a non-inherited context
-    - dupl # code clone detection
     - durationcheck # check for two durations multiplied together
     - errname # checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
     - errorlint # find code that will cause problems with the error wrapping scheme
@@ -185,6 +184,7 @@ linters:
     - deadcode # enabled-default. but duplicated & deprecated someday
     - structcheck # enabled-default. but duplicated & deprecated someday
     - varcheck # enabled-default. but duplicated & deprecated someday
+    - dupl # code clone detection    
 issues:
   exclude:
     - misspell
