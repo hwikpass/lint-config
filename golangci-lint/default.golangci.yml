@@ -5,6 +5,7 @@ run:
   build-tags: []
   skip-dirs:
     - test
+    - mocks
   skip-dirs-use-default: false
   skip-files:
     - main.go
