@@ -148,6 +148,7 @@ linters-settings:
   gocritic:
     disabled-checks:
       - exitAfterDefer # panic is required when examines config
+      - regexpMust
 linters:
   enable:
     - errcheck # checks unchecked errors
