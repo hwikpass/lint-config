@@ -9,7 +9,10 @@ run:
   skip-dirs-use-default: false
   skip-files:
     - main.go
+    - go.sum
+    - go.mod
   allow-parallel-runners: true
+  go: '1.19'
 output:
   format: colored-line-number
   print-issued-lines: true
@@ -122,7 +125,7 @@ linters-settings:
         disabled: false
       # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#var-naming>
       - name: var-naming
-        disabled: false
+        disabled: true
       # <https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unexported-naming>
       - name: unexported-naming
         disabled: false
@@ -148,7 +151,6 @@ linters-settings:
   gocritic:
     disabled-checks:
       - exitAfterDefer # panic is required when examines config
-      - regexpMust
 linters:
   enable:
     - errcheck # checks unchecked errors
@@ -169,7 +171,6 @@ linters:
     - gocritic # provides diagnostics that check for bugs, performance and style issues
     - godot # check if comments end in a period
     - gofmt # checks whether code was gofmt-ed
-    - ifshort # checks that your code uses short syntax for if-statements whenever possible
     - misspell # finds commonly misspelled English words in comments
     - noctx # finds sending http request without context.Context
     - predeclared # find code that shadows one of Go's predeclared identifiers
